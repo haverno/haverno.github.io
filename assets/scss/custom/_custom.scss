@@ -1,0 +1,58 @@
+.beautiful {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Cinzel Decorative', serif !important;
+    background-image: linear-gradient(90deg, #f37055 0, #ef4e7b 40%, #f37055 45%, #a166ab 50%, #f37055 55%, #ef4e7b 60%, #f37055 100%);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.list-title, .term-title, .list-year, .list-month {
+    font-family: 'glyph-correction', 'Cinzel Decorative', 'Noto Serif SC', serif;
+}
+.brand {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    line-height: 1;
+}
+.nav {
+    font-size: 1em;
+    margin-top: 0.3em;
+}
+.home .poetry {
+    padding: 10em 1em;
+}
+
+@font-face {
+    font-family: 'Amstelvar';
+    font-display: swap;
+    src: url('#{$baseRelURL}/fonts/Amstelvar-Roman-VF.woff2') format('woff2-variations'),
+         url('#{$baseRelURL}/fonts/Amstelvar-Roman-VF.woff2') format('woff2');
+    font-weight: 100 900;
+    font-stretch: 50% 125%;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Amstelvar';
+    font-display: swap;
+    src: url('#{$baseRelURL}/fonts/Amstelvar-Italic-VF.woff2') format('woff2-variations'),
+         url('#{$baseRelURL}/fonts/Amstelvar-Italic-VF.woff2') format("woff2");
+    font-weight: 100 900;
+    font-stretch: 50% 125%;
+    font-style: italic;
+}
+body {
+    font-variation-settings:
+        'wdth' var(--text-wdth),
+        'opsz' var(--text-opsz),
+        'YTLC' var(--text-YTLC);
+}
+
+.post-title {
+    font-family: 'glyph-correction', 'Amstelvar', 'Noto Serif SC', serif;
+    font-variation-settings:
+        'wght' 550,
+        'opsz' 60,
+        'YOPQ' 90;
+}
