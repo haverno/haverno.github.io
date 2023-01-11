@@ -1,7 +1,7 @@
 ##########################################
 # Site Settings
 
-baseURL = "https://github.haverno.io/"
+baseURL = "https://haverno.github.io/"
 title = "Haverno"
 languageCode = "en"
 hasCJKLanguage = false
