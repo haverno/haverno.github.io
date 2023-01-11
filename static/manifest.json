@@ -1,0 +1,16 @@
+{
+    "name": "Haverno",
+    "short_name": "Hvn",
+    "icons": [
+        {
+            "src": "/img/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "start_url": "/"
+}
