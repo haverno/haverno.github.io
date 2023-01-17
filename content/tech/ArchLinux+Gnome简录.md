@@ -22,6 +22,7 @@ draft: false
 ### Yay
 aur（archlinux user repository）中有很多官方没有的软件包: https://aur.archlinux.org/
 aur中的软件包需要自己编译安装，**yay**能够使这个过程自动化。
+
 安装yay: 
 执行`sudo vim /etc/pacman.conf`，在最后添加: 
 ```toml
@@ -31,7 +32,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 然后执行`sudo pacman -S archlinux-keyring`。安装完成后即可安装yay: `sudo pacman -S yay`。
 
 ### 开机自启
-在Tweaks中可以设置开机自启的*桌面程序*。要使终端程序自启可以下载**gnome-session-properties**: `yay -S gnome-session-properties`。安装完成后的软件名为**Startup Applications**。
+在Tweaks中可以设置开机自启的*桌面程序*。要使终端程序自启可以下载*gnome-session-properties*: `yay -S gnome-session-properties`。安装完成后的软件名为*Startup Applications*。
 
 ### proxy
 下载clash: `sudo pacman -S clash`，启动: `clash`。待其数据库下载完成后，修改`~/.config/clash/config.yaml`。
@@ -45,8 +46,7 @@ export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
 ```
 git添加代理: 
-`git config --global http.proxy http://127.0.0.1:7890`
-`git config --global https.proxy http://127.0.0.1:7890`
+`git config --global http.proxy http://127.0.0.1:7890`, `git config --global https.proxy http://127.0.0.1:7890`
 ~/.ssh/config中修改: 
 ```sh
 Host github.com
@@ -86,28 +86,29 @@ eval "$(zoxide init zsh)"
 ```
 
 ### 终端
-**Alacritty**: `sudo pacman -S alacritty"
-配置: https://github.com/Jarvisyy/dotfiles/blob/archlinux/alacritty/alacritty.yml
-主题: https://github.com/eendroroy/alacritty-theme
+- **Alacritty**: `sudo pacman -S alacritty"
+  - 配置: https://github.com/Jarvisyy/dotfiles/blob/archlinux/alacritty/alacritty.yml
+  - 主题: `git clone https://github.com/eendroroy/alacritty-theme.git ~/.alacritty-colorscheme`
 
 ### 编辑器
-**neovim**: `sudo pacman -S neovim`
-**neovide** (Gui): `sudo pacman -S neovide`
-配置: https://github.com/Jarvisyy/dotfiles/tree/archlinux/nvim
+- **neovim**: `sudo pacman -S neovim`
+- **neovide** (Gui): `sudo pacman -S neovide`
+  - 配置: https://github.com/Jarvisyy/dotfiles/tree/archlinux/nvim
 
-**vscode**: `yay -S visual-studio-code-bin`
+
+- **vscode**: `yay -S visual-studio-code-bin`
 
 ### 浏览器
-**Firefox**: `sudo pacman -S firefox`
-**Chrome**: `yay -S google-chrome`
+- **Firefox**: `sudo pacman -S firefox`
+- **Chrome**: `yay -S google-chrome`
 
 ### 音乐
-**listen1**: `yay -S listen1-desktop-appimage`
+- **listen1**: `yay -S listen1-desktop-appimage`
 
 ### 通讯
-**qq**: `yay -S linuxqq`
-**wemeet**: `yay -S wemeet-bin`
-**telegram**: `sudo pacman -S install telegram-desktop`
+- **qq**: `yay -S linuxqq`
+- **wemeet**: `yay -S wemeet-bin`
+- **telegram**: `sudo pacman -S install telegram-desktop`
 
 ## Gnome配置
 
@@ -130,8 +131,8 @@ xrandr --output DP-2 --scale 1.6x1.6 --mode 1920x1080
 
 
 **主题下载**: `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git`。进入目录然后`./install.sh`
-美化Firefox: `./tweaks.sh -f monterey`
-美化GDM: `sudo ./tweaks.sh -g`
+- 美化Firefox: `./tweaks.sh -f monterey`
+- 美化GDM: `sudo ./tweaks.sh -g`
 
 **图标下载**: `git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git`。进入目录: `./install.sh`
 
