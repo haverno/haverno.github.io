@@ -5,6 +5,11 @@ draft: false
 ---
 
 本篇文章中使用**Arch Linux** + **Gnome**
+
+![Desktop](/img/posts/desktop.png)
+
+![Firefox](/img/posts/firefox.png)
+
 ## Arch系统安装
 1. **Arch Linux**下载镜像网站（ustc）: https://mirrors.ustc.edu.cn/archlinux/iso/
 2. 下载启动盘制作工具**Rufus**: https://rufus.ie/en/
