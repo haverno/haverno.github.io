@@ -142,3 +142,5 @@ xrandr --output DP-2 --scale 1.6x1.6 --mode 1920x1080
 **图标下载**: `git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git`。进入目录: `./install.sh`
 
 **壁纸下载**（随时间变化）: `git clone https://github.com/vinceliuice/WhiteSur-wallpapers.git`。进入目录: `sudo ./install-gnome-backgrounds.sh`
+
+**光标下载**: `git clone https://github.com/vinceliuice/WhiteSur-cursors.git`。进入目录: `sudo ./install.sh`
