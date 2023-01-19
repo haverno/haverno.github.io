@@ -5,6 +5,7 @@ draft: false
 ---
 
 本篇文章中使用**Arch Linux** + **Gnome**
+> 更为详细内容请看[arch wiki](https://wiki.archlinux.org/)
 
 ![Desktop](/img/posts/desktop.png)
 
@@ -29,7 +30,7 @@ aur（archlinux user repository）中有很多官方没有的软件包: https://
 aur中的软件包需要自己编译安装，**yay**能够使这个过程自动化。
 
 安装yay: 
-执行`sudo vim /etc/pacman.conf`，在最后添加: 
+执行`sudo vim /etc/pacman.conf`，在最后添加archlinuxcn二进制源: 
 ```toml
 [archlinuxcn]
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
@@ -52,14 +53,6 @@ export https_proxy=http://127.0.0.1:7890
 ```
 git添加代理: 
 `git config --global http.proxy http://127.0.0.1:7890`, `git config --global https.proxy http://127.0.0.1:7890`
-~/.ssh/config中修改: 
-```sh
-Host github.com
-   User "kennyissak@gmail.com"
-   Hostname ssh.github.com
-   PreferredAuthentications publickey
-   Port 443
-```
 
 下载ohmyzsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
@@ -82,7 +75,7 @@ plugins=(
 
 ## 常用软件安装
 
-> 尽管通过yay一样可以下载官方源中的软件，个人更习惯pacman下载官方源软件，yay只下载aur软件。
+> 尽管通过yay一样可以下载官方源中的软件，个人更习惯pacman下载二进制源软件，yay只自动下载与编译aur软件。
 ### 命令行工具
 **zoxide, exa, bat**（替代cd, ls, cat的shell工具）: `sudo pacman -S zoxide exa bat`
 `vim ~/.zshrc`，添加: 
@@ -108,7 +101,7 @@ eval "$(zoxide init zsh)"
 - **Chrome**: `yay -S google-chrome`
 
 ### 音乐
-- **listen1**: `yay -S listen1-desktop-appimage`
+- **lx-music**: `yay -S lx-music-desktop-bin`
 
 ### 通讯
 - **qq**: `yay -S linuxqq`
@@ -118,7 +111,7 @@ eval "$(zoxide init zsh)"
 ## Gnome配置
 
 ### 桌面缩放
-我的桌面缩放使用1.25是完美的，在wayland下可以使用: `gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+我的显示屏桌面缩放使用1.25是完美的，在wayland下可以使用: `gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 `来解锁125缩放，但是会导致很多软件变“糊”。故本人使用X11: 在设置中设置缩放为200。然后写一个脚本: `mkdir ~/Documents/sh`，`vim ~/Documents/sh/display.sh`
 ```sh
 #!/bin/sh

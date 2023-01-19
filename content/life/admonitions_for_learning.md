@@ -1,7 +1,7 @@
 ---
 title: "Admonitions_for_learning"
 date: 2023-01-13T19:33:26+08:00
-draft: false
+draft: true
 ---
 
 :alarm_clock:灵活变通，勤奋努力，摆好心态，保持专注。
